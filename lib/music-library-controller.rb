@@ -5,7 +5,7 @@ class MusicLibraryController
     MusicImporter.new(path).import
   end
 
-  def call 
+  def call
     input = ""
 
     until input == "exit"
@@ -19,6 +19,6 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
       input = gets.chomp
-  end 
+  end
 
-end 
+end
