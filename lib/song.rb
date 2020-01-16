@@ -26,6 +26,16 @@ class Song
     find_by_name(name) || create(name)
   end
 
+  def self.new_from_filename(file)
+    Song.new(nil).tap do |song| 
+      artist,name,genre = file.split(" - ")
+      genre.chomp!(".mp3")
+      song.name = name
+      song.artist = Artist.find_or_create_by_name(artist)
+      song.genre = Genre.find_or_create_by_name(genre)
+    end
+  end
+
   def self.all
     @@all
   end
