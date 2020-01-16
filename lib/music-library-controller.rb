@@ -34,5 +34,6 @@ class MusicLibraryController
     sorted_artist.each_with_index do |artist, index|
       puts "#{index + 1}. #{artist.name} "
     end
+  end
 
 end
