@@ -36,6 +36,11 @@ class Song
     end
   end
 
+  def self.create_from_filename(file)
+    song = new_from_filename(file)
+    song.save
+  end
+
   def self.all
     @@all
   end
