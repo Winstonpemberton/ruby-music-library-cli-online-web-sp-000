@@ -1,3 +1,4 @@
+require 'pry'
 class MusicLibraryController
   attr_accessor :path
 
@@ -7,7 +8,6 @@ class MusicLibraryController
 
   def call
     input = ""
-
     until input == "exit"
       puts "Welcome to your music library!"
       puts "To list all of your songs, enter 'list songs'."
@@ -21,5 +21,10 @@ class MusicLibraryController
       input = gets.chomp
     end
   end
+
+  def list_songs
+    sorted_songs = Song.sort_by(&:name)
+    binding.pry
+  end 
 
 end
