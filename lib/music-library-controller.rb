@@ -24,7 +24,7 @@ class MusicLibraryController
 
   def list_songs
     sorted_songs = Song.all.sort_by(&:name)
-    binding.pry
+    
   end
 
 end
