@@ -27,7 +27,7 @@ class Song
   end
 
   def self.new_from_filename(file)
-    Song.new(nil).tap do |song| 
+    Song.new(nil).tap do |song|
       artist,name,genre = file.split(" - ")
       genre.chomp!(".mp3")
       song.name = name
