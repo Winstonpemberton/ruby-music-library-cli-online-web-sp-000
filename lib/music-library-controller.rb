@@ -73,6 +73,13 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.chomp.to_i - 1
 
+    if input.between?(1..songs.length)
+      song = Song.all.sort_by(&:name)[input]
+    end
+
+    puts "Playing #{song.name} by #{song.artist.name}"
+    
+
   end
 
 
