@@ -74,7 +74,7 @@ class MusicLibraryController
     input = gets.chomp.to_i - 1
     songs = Song.all
 
-    if input.between?(1..songs.length)
+    if (1..songs.length).include(input)
       song = Song.all.sort_by(&:name)[input]
     end
 
