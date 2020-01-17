@@ -21,7 +21,7 @@ class MusicLibraryController
       input = gets.chomp
 
       case input
-      when input == "list songs"
+      when "list songs"
         self.list_songs
       end
     end
